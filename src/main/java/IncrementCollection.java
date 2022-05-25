@@ -10,7 +10,7 @@ public class IncrementCollection<Object> {
         return object;
     }
 
-    public Object incrementList(Object object) {
+    private Object incrementList(Object object) {
         List<Object> listObject = (List<Object>)object;
         ListIterator<Object> listIterator = listObject.listIterator();
         while (listIterator.hasNext())
@@ -18,7 +18,7 @@ public class IncrementCollection<Object> {
         return object;
     }
 
-    public Object incrementSet(Object object) {
+    private Object incrementSet(Object object) {
         Set<Object> setObject = (Set<Object>) object;
         Set<Object> newSet = new HashSet<>();
         for (Object obj : setObject)
@@ -26,7 +26,7 @@ public class IncrementCollection<Object> {
         return (Object) newSet;
     }
 
-    public Object incrementQueue(Object object) {
+    private Object incrementQueue(Object object) {
         Queue<Object> queueObject = (Queue<Object>) object;
         int size = queueObject.size();
         for (int i = 0; i < size; i++)
