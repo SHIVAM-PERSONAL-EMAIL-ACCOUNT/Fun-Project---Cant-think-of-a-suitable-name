@@ -10,7 +10,7 @@ public class IncrementCollection<Object> {
         return object;
     }
 
-    public Object incrementList(Object object) {
+    private Object incrementList(Object object) {
         List<Object> listObject = (List<Object>)object;
         List<Object> newList = getConcreteType(listObject);
         for (Object obj : listObject)
@@ -18,7 +18,7 @@ public class IncrementCollection<Object> {
         return (Object) newList;
     }
 
-    public List<Object> getConcreteType(List<Object> list) {
+    private List<Object> getConcreteType(List<Object> list) {
         if (list instanceof LinkedList<Object>) return new LinkedList<>();
         else if (list instanceof ArrayList<Object>) return new ArrayList<>();
         // add more List-types
@@ -26,7 +26,7 @@ public class IncrementCollection<Object> {
         return list;
     }
 
-    public Object incrementSet(Object object) {
+    private Object incrementSet(Object object) {
         Set<Object> setObject = (Set<Object>) object;
         Set<Object> newSet = getConcreteType(setObject);
         for (Object obj : setObject)
@@ -34,7 +34,7 @@ public class IncrementCollection<Object> {
         return (Object) newSet;
     }
 
-    public Set<Object> getConcreteType(Set<Object> set) {
+    private Set<Object> getConcreteType(Set<Object> set) {
         if (set instanceof HashSet<Object>) return new HashSet<>();
         else if (set instanceof TreeSet<Object>) return new TreeSet<>();
         else if (set instanceof LinkedHashSet<Object>) return new LinkedHashSet<>();
@@ -43,7 +43,7 @@ public class IncrementCollection<Object> {
         return set;
     }
 
-    public Object incrementQueue(Object object) {
+    private Object incrementQueue(Object object) {
         Queue<Object> queueObject = (Queue<Object>) object;
         Queue<Object> newQueue = getConcreteType(queueObject);
         while (!queueObject.isEmpty())
@@ -51,7 +51,7 @@ public class IncrementCollection<Object> {
         return (Object) newQueue;
     }
 
-    public Queue<Object> getConcreteType(Queue<Object> queue) {
+    private Queue<Object> getConcreteType(Queue<Object> queue) {
         if (queue instanceof ArrayDeque<Object>) return new ArrayDeque<>();
         else if (queue instanceof LinkedList<Object>) return new LinkedList<>();
         else if (queue instanceof PriorityQueue<Object>) return new PriorityQueue<>();
