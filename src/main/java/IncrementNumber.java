@@ -6,6 +6,7 @@ public class IncrementNumber<Object> {
         else if (object instanceof Float) return incrementFloat(object);
         else if (object instanceof Long) return incrementLong(object);
         else if (object instanceof Short) return incrementShort(object);
+        // add more Number-types
 
         return object;
     }
