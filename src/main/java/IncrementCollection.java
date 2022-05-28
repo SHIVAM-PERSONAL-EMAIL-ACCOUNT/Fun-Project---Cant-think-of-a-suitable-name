@@ -2,6 +2,12 @@ import java.util.*;
 
 public class IncrementCollection<Object> {
 
+    private IncrementObjectInterface<Object> incrementObject;
+
+    public IncrementCollection(IncrementObject<Object> incrementObject) {
+        this.incrementObject = incrementObject;
+    }
+
     public Object increment(Object object) {
         if (object instanceof List<?>) return incrementList(object);
         else if (object instanceof Set<?>) return incrementSet(object);
@@ -14,7 +20,7 @@ public class IncrementCollection<Object> {
         List<Object> listObject = (List<Object>)object;
         List<Object> newList = getConcreteType(listObject);
         for (Object obj : listObject)
-            newList.add(new IncrementObject<Object>().increment(obj));
+            newList.add(incrementObject.increment(obj));
         return (Object) newList;
     }
 
@@ -23,14 +29,14 @@ public class IncrementCollection<Object> {
         else if (list instanceof ArrayList<Object>) return new ArrayList<>();
         // add more List-types
 
-        return list;
+        return new ArrayList<>();
     }
 
     private Object incrementSet(Object object) {
         Set<Object> setObject = (Set<Object>) object;
         Set<Object> newSet = getConcreteType(setObject);
         for (Object obj : setObject)
-            newSet.add(new IncrementObject<Object>().increment(obj));
+            newSet.add(incrementObject.increment(obj));
         return (Object) newSet;
     }
 
@@ -40,14 +46,14 @@ public class IncrementCollection<Object> {
         else if (set instanceof LinkedHashSet<Object>) return new LinkedHashSet<>();
         // add more Set-types
 
-        return set;
+        return new HashSet<>();
     }
 
     private Object incrementQueue(Object object) {
         Queue<Object> queueObject = (Queue<Object>) object;
         Queue<Object> newQueue = getConcreteType(queueObject);
         while (!queueObject.isEmpty())
-            newQueue.add(new IncrementObject<Object>().increment(queueObject.poll()));
+            newQueue.add(incrementObject.increment(queueObject.poll()));
         return (Object) newQueue;
     }
 
@@ -57,6 +63,6 @@ public class IncrementCollection<Object> {
         else if (queue instanceof PriorityQueue<Object>) return new PriorityQueue<>();
         // add more Queue-types
 
-        return queue;
+        return new ArrayDeque<>();
     }
 }

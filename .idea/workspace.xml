@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="759e1ca6-a45c-4ab2-a8ee-e4a08d9ddeae" name="Changes" comment="Corrected Increment-Collections functionality to account for different concrete types" />
+    <list default="true" id="759e1ca6-a45c-4ab2-a8ee-e4a08d9ddeae" name="Changes" comment="Changed internal methods' visibility to private">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/IncrementCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/IncrementCollection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/IncrementMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/IncrementMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/IncrementObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/IncrementObject.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,6 +19,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit5 Test Class" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -46,16 +52,9 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.IncrementObject">
-    <configuration name="IncrementIfNumberTestRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="IncrementIfNumberTestRunner" />
-      <module name="IncrementNumbers" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="IncrementMap" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="IncrementMap" />
+  <component name="RunManager" selected="Application.Test">
+    <configuration name="DITest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DITest" />
       <module name="IncrementNumbers" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -75,6 +74,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Test" />
+      <module name="IncrementNumbers" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="IncrementMapTest.givenMapOfObjectValuesOfTypeNumbers_whenIncrement_returnMapWithNumberObjectsIncrementedByOne" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="IncrementNumbers" />
       <option name="PACKAGE_NAME" value="" />
@@ -87,11 +93,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Test" />
+        <item itemvalue="Application.DITest" />
         <item itemvalue="Application.IncrementObject" />
         <item itemvalue="Application.IncrementMapTestRunner" />
         <item itemvalue="JUnit.IncrementMapTest.givenMapOfObjectValuesOfTypeNumbers_whenIncrement_returnMapWithNumberObjectsIncrementedByOne" />
-        <item itemvalue="Application.IncrementMap" />
-        <item itemvalue="Application.IncrementIfNumberTestRunner" />
       </list>
     </recent_temporary>
   </component>
@@ -132,7 +138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653549350627</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Changed internal methods' visibility to private">
+      <created>1653549627373</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1653549627373</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -150,6 +163,7 @@
     <MESSAGE value="First and Final Commit of the Project" />
     <MESSAGE value="Final Commit of the Project" />
     <MESSAGE value="Corrected Increment-Collections functionality to account for different concrete types" />
-    <option name="LAST_COMMIT_MESSAGE" value="Corrected Increment-Collections functionality to account for different concrete types" />
+    <MESSAGE value="Changed internal methods' visibility to private" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed internal methods' visibility to private" />
   </component>
 </project>
